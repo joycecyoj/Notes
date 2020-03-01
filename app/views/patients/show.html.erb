@@ -1,0 +1,19 @@
+<h2>Patient Infomration</h2>
+<p>
+  <strong>Name:</strong>
+  <%= @patient.name %>
+</p>
+
+<p>
+  <strong>Addresss:</strong>
+  <%= @patient.address %>
+</p>
+<%= link_to 'Edit', edit_patient_path(@patient) %>
+
+<h2>Notes</h2>
+<%= render @patient.notes %>
+
+<h2>Add a note:</h2>
+<%= render 'notes/form', note: @patient.notes.build %>
+
+<%= link_to 'Back', patients_path %>

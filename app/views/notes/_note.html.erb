@@ -1,0 +1,20 @@
+<p>
+  <strong>Note:</strong>
+  <%= note.body %>
+</p>
+
+<p>
+  <strong>Doctor:</strong>
+  <%= note.doctor %>
+</p>
+
+<p>
+  <tr>
+    <td><%= link_to 'Delete', [note.patient, note],
+               method: :delete,
+               data: { confirm: 'Are you sure you want to delete this note?' } %></td>
+
+    <td><%= link_to 'Edit', edit_patient_note_path(@patient, note)%></td>
+  </tr>
+</p>
+
